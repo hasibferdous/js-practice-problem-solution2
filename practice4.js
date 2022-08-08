@@ -66,3 +66,78 @@ function woodCalculator(chairQuantity, tableQuantity, bedQuantity){
 const totalWood = woodCalculator(2, 2, 5);
 console.log('total wood required:', totalWood);
 
+//-----------------------------------------------------
+const phones = [
+    {name: 'Samsung', camera: 12, storage: '32gb', price: 45000, color:'silver'},
+    {name: 'Walton', camera: 10, storage: '32gb', price: 22000, color:'silver'},
+    {name: 'iphone', camera: 14, storage: '32gb', price: 85000, color:'silver'},
+    {name: 'Xaomi', camera: 12, storage: '32gb', price: 55000, color:'silver'},
+    {name: 'Oppo', camera: 12, storage: '32gb', price: 15000, color:'white'},
+    {name: 'Nokia', camera: 12, storage: '32gb', price: 55000, color:'silver'},
+    {name: 'HTC', camera: 12, storage: '32gb', price: 50000, color:'silver'},
+]
+
+function cheapestPhone(phones){
+    let cheapest = phones[0];
+    for (let i=0; i< phones.length; i++){
+        const phone = phones[i];
+        if (phone.price < cheapest.price){
+            cheapest = phone;
+
+        }
+    }
+    return cheapest;
+    
+}
+const selection = cheapestPhone(phones);
+console.log(selection);
+
+//----------------------------------------------
+
+//shopping cart
+
+const shoppingCart = [
+    {name: 'shoe', price: 1200 },
+    {name: 'shirt', price: 2500 },
+    {name: 'pant', price: 2200 },
+    {name: 'belt', price: 700 },
+]
+function totalCost(products){
+    let sum = 0;
+    for(let i =0; i< products.length; i++){
+        const product = products[i];
+        sum = sum + product.price;
+        console.log(product);
+
+    }
+    return sum;
+}
+const expense = totalCost(shoppingCart);
+console.log("total Expense:",expense);
+
+
+//--quantity cart 
+
+const quantityCart = [
+    {name: 'shoe', price: 1200 , quantity: 2 },
+    {name: 'shirt', price: 2500, quantity: 3 },
+    {name: 'pant', price: 2200 , quantity: 5 },
+    {name: 'belt', price: 700  , quantity: 4},
+]
+function totalQCost(products){
+    let sum1 = 0;
+    for(let i =0; i< products.length; i++){
+        const product = products[i];
+        const productTotal = product.price * product.quantity;
+        sum1 = sum1 + productTotal;
+        console.log(product);
+
+    }
+    return sum1;
+}
+const qunatityExpense = totalQCost(quantityCart);
+console.log("total quantity Expense :", qunatityExpense);
+
+
+
+//-------------------------------------------
