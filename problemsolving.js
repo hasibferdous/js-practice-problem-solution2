@@ -60,9 +60,13 @@ function bestFriend(arra){
         if (maxi > max_str) {
             ans = arra[i];
             max_str = maxi;
+            
         }
+           
     }
+    
     return ans;
+    
 }
 let friends = bestFriend(friend);
 console.log('longest string:', friends);
@@ -78,10 +82,14 @@ function removeNegative(number){
         const numbers = number[i];
         if(numbers >= 0 ){
             unique.push(numbers);
+            
+            
        }
-        
+       
         }
+        
         return unique;
+        
     }
 const uniqueNumbers = removeNegative(number);
 console.log('The array without negative numbers:', uniqueNumbers);
